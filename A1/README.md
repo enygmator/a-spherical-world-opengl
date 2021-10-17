@@ -26,3 +26,6 @@ Any confusions please put a comment against this post, you will be answered.
 
 > Marks division:40 marks for completion  10 marks for imagination (bring in your own features to the said assignments) 50 marks Total
 
+# Questions
+
+1. can we use GLM?
