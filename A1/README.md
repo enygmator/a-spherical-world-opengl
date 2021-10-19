@@ -1,7 +1,5 @@
 # Assignment
 
-*** check out triangular stipes (or something) which help build curved surfaces
-
 Imagine a hollow sphere at the center of the coordinate frame (0,0,0).
 The walls of the sphere are rigid.
 The insides of the sphere contains a few 3D objects (refer list attached) that are made of trianlgles, which are constantly trying to escape from the clutches of the sphere, but bouces back again and again (randomly). These objects are rotating(randomly) and moving(randomly) within the boundry of the sphere. You are to visulize this scenario with following conditions:
@@ -25,7 +23,3 @@ Any confusions please put a comment against this post, you will be answered.
 
 
 > Marks division:40 marks for completion  10 marks for imagination (bring in your own features to the said assignments) 50 marks Total
-
-# Questions
-
-1. can we use GLM?
