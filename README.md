@@ -2,6 +2,10 @@
 
 ![A spherical world - OpenGL - animated GIF](3D_Playsphere.gif)
 
+## Download the app
+
+If you don't want to use the code and instead directly download the application, you can just got to `releases` here on GitHub and download a binary named `A1.exe` from a release called `RC - v1`, and run it on your Windows machine. While downloading, your browser might give you a warning (since this app wasn't signed by a secure authority) which you'll have to ignore and keep the file.
+
 ## Instructions to use the application
 
 INSTRUCTIONS:
