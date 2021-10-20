@@ -56,6 +56,8 @@ There are certain variables you can customize (in #defines):
 
 In order to run/execute the code in this repo, you must have your Windows machine ready with the OpenGL software. You may find instructions to achieve that [Here at GeeksForGeeks](https://www.geeksforgeeks.org/how-to-setup-opengl-with-visual-studio-2019-on-windows-10/)
 
+As of 20-Oct-21, the latest version of GLUT is [this](https://www.opengl.org/resources/libraries/glut/glutdlls37beta.zip)
+
 ## Installation, Build, Usage & Development
 
 Once, you have your machine ready, you will need to clone this repo locally using `git` or, you may just download it.

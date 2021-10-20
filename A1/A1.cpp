@@ -94,25 +94,6 @@ const int winW = 960;
 /* END Configurations */
 
 
-/*
-
-void specialKeys(int key, int x, int y)
-{
-	switch (key)
-	{
-	case GLUT_KEY_DOWN: tY -= 0.2; break;
-	case GLUT_KEY_UP: tY += 0.2; break;
-	case GLUT_KEY_LEFT:tX -= 0.2; break;
-	case GLUT_KEY_RIGHT: tX += 0.2; break;
-	default:
-		break;
-	}
-
-	glutPostRedisplay();
-}
-
-*/
-
 float GetColorComponent(float temp1, float temp2, float temp3)
 {
 	if (temp3 < 0.0)
@@ -682,9 +663,9 @@ void display_callback()
 	//draw teapot
 	//glutSolidTeapot(1);
 
-	glPushMatrix();
+	setMaterial(1, 1, 1, 0.8, 0.8, 0.8, 0.1, 0.1, 0.1, 0);
 
-	//setMaterial(0.2, 0.2, 0.2, 0.6, 0.6, 0.6, 0.8, 0.8, 0.8, 40); //differnet intensities of white light
+	glPushMatrix();
 
 	glTranslatef(cub_tX, cub_tY, cub_tZ);
 	glRotatef(cub_rX, 1, 0, 0);
@@ -700,8 +681,6 @@ void display_callback()
 
 	glPushMatrix();
 
-	//setMaterial(0.2, 0.2, 0.2, 0.6, 0.6, 0.6, 0.8, 0.8, 0.8, 40); //differnet intensities of white light
-
 	glTranslatef(ico_tX, ico_tY, ico_tZ);
 	glRotatef	(ico_rX, 1, 0, 0);
 	glRotatef	(ico_rY, 0, 1, 0);
@@ -715,8 +694,6 @@ void display_callback()
 
 
 	glPushMatrix();
-
-	//setMaterial(0.2, 0.2, 0.2, 0.6, 0.6, 0.6, 0.8, 0.8, 0.8, 40); //differnet intensities of white light
 
 	glTranslatef(cyl_tX, cyl_tY, cyl_tZ);
 	glRotatef	(cyl_rX, 1, 0, 0);
@@ -889,9 +866,9 @@ void moveAroundTheOnTheSphereUsingMouse(int x, int y)
 
 void customKeysFunc(unsigned char key, int x, int y)
 {
-	float ntX = *tX;
-	float ntY = *tY;
-	float ntZ = *tZ;
+	float ntX = tX != NULL ? *tX : NULL;
+	float ntY = tY != NULL ? *tY : NULL;
+	float ntZ = tZ != NULL ? *tZ : NULL;
 
 	switch (key)
 	{
@@ -1020,9 +997,9 @@ void customKeysFunc(unsigned char key, int x, int y)
 
 	if (sqrt((ntX * ntX) + (ntY * ntY) + (ntZ * ntZ)) < WORLD_RADIUS)
 	{
-		*tX = ntX;
-		*tY = ntY;
-		*tZ = ntZ;
+		if (tX != NULL) *tX = ntX;
+		if (tY != NULL) *tY = ntY;
+		if (tZ != NULL) *tZ = ntZ;
 	}
 
 	glutPostRedisplay();
